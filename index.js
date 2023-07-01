@@ -38,4 +38,4 @@ app.listen(PORT,()=>{
     console.log(`Server is listening`)
 })
 
-// DefaultData()
+DefaultData()
