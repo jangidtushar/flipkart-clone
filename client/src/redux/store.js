@@ -1,26 +1,20 @@
-import {createStore, combineReducers,applyMiddleware} from "redux"
-
+import {createStore,combineReducers,applyMiddleware} from "redux"
+import {composeWithDevTools} from "redux-devtools-extension"
 import thunk from "redux-thunk"
-import {composeWithDevTools} from "redux-devtools-extension";
-import { getProductDetailsReducer, getProductsReducer } from "./reducers/productReducer";
+import { getProductDetailsReducer, getProductsReducer } from "./reducers/productReducer"
+import { cartReducer } from "./reducers/cartReducer"
 
-const reducer= combineReducers({
+const reducer=combineReducers({
     getProducts:getProductsReducer,
-    getProductDetails:getProductDetailsReducer
+    getProductDetails:getProductDetailsReducer,
+    cart:cartReducer
 })
 
-const middleware= [thunk]
+const middleware=[thunk]
 
-const store = createStore(
+const store= createStore(
     reducer,
     composeWithDevTools(applyMiddleware(...middleware))
 )
 
-export default store
-
-//npm i redux is used to creace store combine reducers and apply middlewares
-// npm i redux-thunk this is a middleware for redux
-// npm i redux-devtools-extensions is used to apply any crome extensiond in the store 
-// npm i react-redux it provide a provider to apply this store globally
-
-//1. apply provider and value in index.js
+export default store;
