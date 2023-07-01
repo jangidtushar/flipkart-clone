@@ -1,7 +1,7 @@
 import axios from "axios"
 import * as actionTypes from "../constants/productConstant"
 
-const URL=`https://rose-zany-hippo.cyclic.app/`
+const URL=``
 
 export const getProducts= ()=> async(dispatch)=>{
     try {

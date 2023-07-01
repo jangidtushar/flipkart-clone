@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const URL= 'https://rose-zany-hippo.cyclic.app/'
+const URL= ''
 
 export const authenticateSignup=async(data)=>{
     try {
