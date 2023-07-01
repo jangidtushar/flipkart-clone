@@ -128,7 +128,7 @@ const LoginDialog = ({ open, setOpen }) => {
 
   const onInputChange=(e)=>{
     setSignup({...signup, [e.target.name]: e.target.value})
-    console.log(signup)
+    // console.log(signup)
   }
 
   const signupUser=async()=>{
@@ -171,28 +171,20 @@ const LoginDialog = ({ open, setOpen }) => {
           {account.view === "login" ? (
             <Wrapper>
               <TextField variant="standard" onChange={(e)=>onValueChange(e)} name="username" label="Enter Username" />
-
               { error &&
               <Error>Please Enter Valid Username or Password</Error>
               }
-
               <TextField variant="standard" onChange={(e)=>onValueChange(e)} name="password" label="Enter Password" />
-
               <Text>
                 By Continuing, you agree to Flipkart's Terms of Use and Privacy
                 Policy
               </Text>
-
               <LoginButton onClick={()=>loginUser()} >Login</LoginButton>
-
               <Typography style={{ textAlign: "center" }}>OR</Typography>
-
               <RequestOtp>Request OTP</RequestOtp>
-
               <CreateAccount onClick={() => toggleSignup()}>
                 New to Flipkart? Create an account
               </CreateAccount>
-
             </Wrapper>
           ) : (
             <Wrapper>
