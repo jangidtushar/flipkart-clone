@@ -32,10 +32,10 @@ const password=process.env.DB_PASSWORD
 
 Connection(username,password)
 
-const PORT=process.env.PORT || 8000
+const PORT=process.env.PORT || 5000
 
 app.listen(PORT,()=>{
     console.log(`Server is listening`)
 })
 
-DefaultData()
+// DefaultData()
